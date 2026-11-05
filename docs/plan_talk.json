@@ -1,0 +1,42 @@
+{
+ "title": "Raise, Jump, Wave, and Sit",
+ "steps": [
+  {
+   "task": "raisearms-h-h",
+   "seconds": 1.5,
+   "say": "Raising both arms high"
+  },
+  {
+   "task": "jump-2",
+   "seconds": 2,
+   "say": "Jumping up"
+  },
+  {
+   "task": "raisearms-l-h",
+   "seconds": 0.7,
+   "say": "Waving with my right hand"
+  },
+  {
+   "task": "raisearms-l-m",
+   "seconds": 0.6,
+   "say": "Waving right hand side to side"
+  },
+  {
+   "task": "raisearms-l-h",
+   "seconds": 0.6,
+   "say": "Waving again"
+  },
+  {
+   "task": "raisearms-l-m",
+   "seconds": 0.6,
+   "say": "One more wave"
+  },
+  {
+   "task": "sitonground",
+   "seconds": 2,
+   "say": "Sitting down on the floor"
+  }
+ ],
+ "note": "Waving was approximated by quickly alternating right arm between high and middle while keeping left arm low.",
+ "request": "Muse, raise both your arms, then jump, then wave at me with your right hand, then sit down on the floor"
+}

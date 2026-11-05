@@ -19,7 +19,7 @@ ap.add_argument("--cropx", type=int, default=200)
 a = ap.parse_args()
 
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-for f in ("assets/fonts/Inter-Regular.ttf", "/usr/share/fonts/truetype/inter/Inter-Regular.ttf"):
+for f in ("/home/amanpreet/.local/share/fonts/Inter-Regular.ttf", "/usr/share/fonts/truetype/inter/Inter-Regular.ttf"):
     if Path(f).exists():
         FONT = f
 F = lambda s: ImageFont.truetype(FONT, s)  # noqa: E731

@@ -1,4 +1,4 @@
-# Holo: teach a humanoid from one video
+# Holo: teach a humanoid from one video, or just tell it
 
 Show a physics-simulated humanoid **one ordinary video** of a person, and it performs the move. There's **no motion-capture suit and no training per skill**, and Muse Spark explains what the move is and why.
 
@@ -16,9 +16,22 @@ Demo video (with voiceover): [`docs/demo.mp4`](docs/demo.mp4)
 |---|---|---|
 | 1. See the body | **SAM 3D Body** (Meta, `facebook/sam-3d-body-dinov3`) | Full 3D human body for every frame of a normal video: 70 MHR keypoints in metres, plus the camera |
 | 2. Retarget | MuJoCo IK (ours) | Keeps the person's **bone directions** and uses the **humanoid's bone lengths**, then fits the HumEnv/SMPL humanoid with inverse kinematics (about 2 cm per joint) |
-| 3. Do it with physics | **Meta Motivo** (`facebook/metamotivo-M-1`) | The motion becomes a *tracking prompt*. The behavioral foundation model controls the humanoid **zero-shot**, with gravity, contacts and balance |
+| 3. Do it with physics | **Meta Motivo** (`facebook/metamotivo-M-1`) | The motion becomes a *tracking prompt* (from video), or Muse's plan becomes *reward prompts* (from words). The behavioral foundation model controls the humanoid **zero-shot**, with gravity, contacts and balance |
 | 4. Understand it | **Muse Spark Open** (`meta-models/muse-spark-open-1026`, Baseten) | Names the move and gives its goal, phases, balance, what's hard for a robot, and useful edits |
 | 5. Check it | ours | Renders the robot **from the original camera** (focal length recovered from SAM 3D Body's 2D/3D joints) and ghosts it over the person, plus a numeric report card |
+
+## Talk to it
+Say what you want, and **Muse Spark Open** plans it as a sequence of humanoid behaviours (HumEnv tasks: arms, jump, crouch, sit, walk, spin...). **Meta Motivo** turns each one into motion **zero-shot from a reward prompt** and performs the whole sequence in one physics simulation. Muse composes moves it doesn't have by itself. For example, it builds a wave by alternating arm poses and says so.
+
+> *"Muse, raise both your arms, then jump, then wave at me with your right hand, then sit down on the floor"*
+
+![talk](docs/images/talk_sequence.jpg)
+
+The plan Muse produced is in [`docs/plan_talk.json`](docs/plan_talk.json).
+```bash
+python pipeline/muse_plan.py "raise both arms, then jump, then wave" plan.json      # laptop (Muse Spark Open on Baseten)
+MUJOCO_GL=egl python pipeline/talk_robot.py plan.json talk.mp4                     # GPU box (Motivo M-1 + inference buffer)
+```
 
 ## Results (pure Motivo, no assist forces, no training)
 
