@@ -1,0 +1,47 @@
+{
+ "title": "Freestyle Dance Party",
+ "steps": [
+  {
+   "task": "raisearms-h-h",
+   "seconds": 0.8,
+   "say": "strikes a pose with both arms up"
+  },
+  {
+   "task": "raisearms-h-l",
+   "seconds": 0.6,
+   "say": "waves left arm high"
+  },
+  {
+   "task": "raisearms-l-h",
+   "seconds": 0.6,
+   "say": "waves right arm high"
+  },
+  {
+   "task": "rotate-z-5-0.8",
+   "seconds": 1,
+   "say": "spins left with flair"
+  },
+  {
+   "task": "rotate-z--5-0.8",
+   "seconds": 1,
+   "say": "spins back right"
+  },
+  {
+   "task": "move-ego-0-2-raisearms-h-h",
+   "seconds": 1,
+   "say": "shimmies forward with arms up"
+  },
+  {
+   "task": "move-ego-180-2-raisearms-m-m",
+   "seconds": 1,
+   "say": "grooves backward with arms out"
+  },
+  {
+   "task": "jump-2",
+   "seconds": 1.2,
+   "say": "finishes with happy jumps"
+  }
+ ],
+ "note": "No preset dance animation available so I composed a freestyle dance from spins, arm waves, steps and jumps.",
+ "request": "Muse, dance for me!"
+}

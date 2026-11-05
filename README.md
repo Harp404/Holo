@@ -1,12 +1,17 @@
 # Holo: teach a humanoid from one video, or just tell it
 
-Show a physics-simulated humanoid **one ordinary video** of a person, and it performs the move. There's **no motion-capture suit and no training per skill**, and Muse Spark explains what the move is and why.
+Show a physics-simulated humanoid **one ordinary video** of a person, and it performs the move. There's **no motion-capture suit and no training per skill**. You can also just **talk to it**: Muse Spark plans, and Meta Motivo performs.
 
-![kick](docs/images/kick_3panel.jpg)
+| "Muse, dance for me!" | "Raise your arms, jump, wave, sit down" |
+|---|---|
+| ![dance](docs/gifs/dance.gif) | ![talk](docs/gifs/talk.gif) |
+| **From a video: taekwondo side kick** | **Same camera check: squats** |
+| ![kick](docs/gifs/kick.gif) | ![squat](docs/gifs/squat_overlay.gif) |
+
+**Demo video with voiceover (about 2 min): [`docs/demo.mp4`](docs/demo.mp4)**
 
 **Pipeline:** any video → **SAM 3D Body** → retarget → **Meta Motivo** humanoid (physics, zero-shot), plus **Muse Spark Open** for intent.
 
-Demo video (with voiceover): [`docs/demo.mp4`](docs/demo.mp4)
 
 ---
 
@@ -19,6 +24,11 @@ Demo video (with voiceover): [`docs/demo.mp4`](docs/demo.mp4)
 | 3. Do it with physics | **Meta Motivo** (`facebook/metamotivo-M-1`) | The motion becomes a *tracking prompt* (from video), or Muse's plan becomes *reward prompts* (from words). The behavioral foundation model controls the humanoid **zero-shot**, with gravity, contacts and balance |
 | 4. Understand it | **Muse Spark Open** (`meta-models/muse-spark-open-1026`, Baseten) | Names the move and gives its goal, phases, balance, what's hard for a robot, and useful edits |
 | 5. Check it | ours | Renders the robot **from the original camera** (focal length recovered from SAM 3D Body's 2D/3D joints) and ghosts it over the person, plus a numeric report card |
+
+## "Muse, dance for me!"
+Muse has no dance in its list of behaviours, so it **choreographs one itself**: a pose, arm waves, spins (which Motivo turns into a cartwheel), a shimmy forward, grooving backward, and happy jumps. Meta Motivo performs it zero-shot in physics. Muse's plan is in [`docs/plan_dance.json`](docs/plan_dance.json).
+
+![dance sequence](docs/images/dance_sequence.jpg)
 
 ## Talk to it
 Say what you want, and **Muse Spark Open** plans it as a sequence of humanoid behaviours (HumEnv tasks: arms, jump, crouch, sit, walk, spin...). **Meta Motivo** turns each one into motion **zero-shot from a reward prompt** and performs the whole sequence in one physics simulation. Muse composes moves it doesn't have by itself. For example, it builds a wave by alternating arm poses and says so.

@@ -113,6 +113,7 @@ def plan_card(plan):
 kick_i, sq_i = json.load(open(O / "intent_kick.json")), json.load(open(O / "intent_sq.json"))
 kick_r, sq_r = json.load(open(O / "report_kick.json")), json.load(open(O / "report_sq.json"))
 plan = json.load(open(O / "plan3.json"))
+dance = json.load(open(O / "plan_dance.json"))
 
 SEG = [
     ("This is Holo. Show a humanoid robot one ordinary video of a person, and it does the move, with physics, and no training. Or just tell it what to do.",
@@ -138,6 +139,10 @@ SEG = [
      plan_card(plan)),
     ("Meta Motivo performs the plan zero-shot, from reward prompts. Arms up, a real jump, a wave, and sitting down, all with physics.",
      video_frames(O / "talk3.mp4", "Muse Spark → Meta Motivo: talk to the humanoid", plan["request"])),
+    ("And the best one. Muse, dance for me. Muse has no dance in its list, so it choreographs one itself: poses, arm waves, spins, a shimmy and jumps.",
+     plan_card(dance)),
+    ("Motivo dances it, with physics. That flip in the middle is a cartwheel it chose by itself.",
+     video_frames(O / "dance.mp4", "\u201cMuse, dance for me!\u201d", "choreographed by Muse Spark  \u00b7  performed by Meta Motivo, zero-shot")),
     ("Under the hood: SAM 3D Body for the body, retargeting with inverse kinematics, Meta Motivo for zero-shot physics control, and Muse Spark Open to understand and plan. All Meta models.",
      slide_frames("How it works", [
          ("SAM 3D Body", "3D human body per frame from one camera (MHR keypoints)"),
