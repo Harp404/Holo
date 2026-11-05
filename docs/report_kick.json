@@ -1,0 +1,14 @@
+{
+ "pose_error_cm": 9.1,
+ "pose_error_lag_aligned_cm": 9.1,
+ "lag_frames": 0,
+ "pose_error_worst_cm": 20.8,
+ "position_error_cm": 40.9,
+ "fell": false,
+ "kick_height_target_m": 1.55,
+ "kick_height_robot_m": 1.64,
+ "kick_reached_pct": 106.0,
+ "ik_fit_cm": 1.8,
+ "speed": 1.0,
+ "turn_error_deg_mean": 74.8
+}

@@ -1,0 +1,54 @@
+{
+ "action": "taekwondo side kick (yop chagi) from fighting stance",
+ "intent": "Deliver a powerful linear side kick to a high/chest-head height target and return to stable guard.",
+ "phases": [
+  {
+   "t": "00:00:00.000-00:00:00.798",
+   "what": "ready fighting stance, side-on",
+   "key_body_parts": [
+    "feet shoulder-width",
+    "knees bent",
+    "fists guard up",
+    "torso sideways"
+   ]
+  },
+  {
+   "t": "00:00:01.595-00:00:02.392",
+   "what": "chamber and extend side kick",
+   "key_body_parts": [
+    "supporting left leg",
+    "right knee chambered",
+    "right leg fully extended to side",
+    "torso lean away",
+    "hips turned over"
+   ]
+  },
+  {
+   "t": "00:00:03.191-00:00:03.988",
+   "what": "retract and rechamber leg",
+   "key_body_parts": [
+    "right knee bent back",
+    "foot pulled in",
+    "torso upright rotation",
+    "guard hands centered"
+   ]
+  },
+  {
+   "t": "00:00:04.786-00:00:05.584",
+   "what": "return to forward-facing guard stance",
+   "key_body_parts": [
+    "both feet planted",
+    "weight even",
+    "fists in front guard",
+    "hips and shoulders square forward"
+   ]
+  }
+ ],
+ "balance": "Weight stays entirely on single supporting left leg during chamber/kick/retract with torso counter-leaning opposite the kick for stability, then redistributed evenly to both feet on recovery.",
+ "hard_parts": "Single-leg balance with high leg extension and large torso lean will be hardest due to high center-of-mass shift, required hip abduction/external rotation, and need for precise ankle stabilization to avoid tipping.",
+ "edits": [
+  "kick lower to waist height for stability",
+  "hold extended kick for 2 seconds before retracting",
+  "do slower chamber with front-facing torso instead of side lean"
+ ]
+}

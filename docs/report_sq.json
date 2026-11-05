@@ -1,0 +1,22 @@
+{
+ "assist_gain": 0.0,
+ "assist_torque_mean_Nm": 0.0,
+ "hold_gain": 0.0,
+ "hold_force_mean_N": 0.0,
+ "turn_error_deg_mean": 15.7,
+ "turn_error_deg_end": 2.6,
+ "drift_cm_end": 12.9,
+ "model": "facebook/metamotivo-M-1",
+ "zsmooth": 5,
+ "pose_error_cm": 5.3,
+ "pose_error_lag_aligned_cm": 5.3,
+ "lag_frames": 0,
+ "pose_error_worst_cm": 11.5,
+ "position_error_cm": 33.7,
+ "fell": false,
+ "kick_height_target_m": 0.18,
+ "kick_height_robot_m": 0.16,
+ "kick_reached_pct": 87.0,
+ "ik_fit_cm": 1.6,
+ "speed": 1.0
+}

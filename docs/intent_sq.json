@@ -1,0 +1,66 @@
+{
+ "action": "kettlebell goblet squat (3 reps to kettlebell lower)",
+ "intent": "Build lower-body strength with controlled squat reps while holding a kettlebell at the chest, then safely lower it to the floor.",
+ "phases": [
+  {
+   "t": "00:00:00.000-00:00:01.533",
+   "what": "Standing start holding kettlebell at chest height with both hands, feet shoulder-width, initiating squat descent",
+   "key_body_parts": [
+    "both hands",
+    "both feet",
+    "hips",
+    "knees"
+   ]
+  },
+  {
+   "t": "00:00:01.533-00:00:04.598",
+   "what": "First full goblet squat - descend hips back and down to bottom position then drive up to standing",
+   "key_body_parts": [
+    "hips",
+    "knees",
+    "ankles",
+    "torso",
+    "both arms"
+   ]
+  },
+  {
+   "t": "00:00:04.598-00:00:07.664",
+   "what": "Second full goblet squat repetition - same controlled down and up with kettlebell pinned to chest",
+   "key_body_parts": [
+    "hips",
+    "knees",
+    "torso",
+    "both arms",
+    "glutes"
+   ]
+  },
+  {
+   "t": "00:00:07.664-00:00:09.197",
+   "what": "Brief standing hold after last squat, maintaining posture before transitioning to lower",
+   "key_body_parts": [
+    "spine",
+    "both feet",
+    "both hands",
+    "shoulders"
+   ]
+  },
+  {
+   "t": "00:00:09.197-00:00:10.729",
+   "what": "Hinge forward and lower kettlebell to floor with arms extended, back rounded/hinged",
+   "key_body_parts": [
+    "spine",
+    "hips",
+    "right arm",
+    "left arm",
+    "both legs"
+   ]
+  }
+ ],
+ "balance": "Weight centered over mid-foot with feet flat shoulder-width apart; stability from braced core, upright torso, and kettlebell held close to chest as counterweight; even bilateral leg drive",
+ "hard_parts": "Smooth eccentric-to-concentric squat transition without jerking and keeping heels down and torso upright under load, plus the final hip-hinge to floor which requires spine articulation and shifting weight forward without toppling - difficult for rigid ankles and limited hip flexion",
+ "edits": [
+  "do only one slow squat with 3-second hold at bottom",
+  "squat deeper (thighs below parallel) or shallower (quarter squat)",
+  "remove weight - do bodyweight squats with hands clasped at chest"
+ ]
+}
